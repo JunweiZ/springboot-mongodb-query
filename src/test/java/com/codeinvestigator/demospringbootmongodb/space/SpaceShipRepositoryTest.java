@@ -21,12 +21,6 @@ public class SpaceShipRepositoryTest {
     SpaceShipService spaceShipService;
 
     @Test
-    public void shipsWithF(){
-        List<SpaceShip> spaceShips = spaceShipRepository.shipsWithF();
-        spaceShips.forEach(System.out::println);
-    }
-
-    @Test
     public void createRows(){
         spaceShipRepository.deleteAll();
         spaceShipRepository.save(new SpaceShip(null, "sourcer", 4));
@@ -38,12 +32,8 @@ public class SpaceShipRepositoryTest {
         spaceShipRepository.save(new SpaceShip(null, "fork", 4));
         spaceShipRepository.save(new SpaceShip(null, "freesbee", 1));
         spaceShipRepository.save(new SpaceShip(null, "rocket", 30));
-
-//        spaceShipRepository.findAll().forEach(System.out::println);
         System.out.println("Heres our sources:");
         spaceShipService.allTheSourcers().forEach(System.out::println);
         System.out.println("*** DONE ***");
-
-
     }
 }

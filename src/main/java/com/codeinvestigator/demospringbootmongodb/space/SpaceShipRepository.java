@@ -10,6 +10,6 @@ public interface SpaceShipRepository extends MongoRepository<SpaceShip, String> 
 
 
 
-    @Query("{type: /^F/}")
+    @Query("{ 'type': {$regex: '^F.*'}}")
     public List<SpaceShip> shipsWithF();
 }

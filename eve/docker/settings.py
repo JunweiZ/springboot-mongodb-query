@@ -2,7 +2,7 @@ DOMAIN = {
     'people': {
         'allow_unknown': True,
         'schema': {
-            'firstname': {'type': 'string'},
+            'firstname': {'type': 'string'}
         }
     }
     ,

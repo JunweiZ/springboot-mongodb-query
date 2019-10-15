@@ -5,8 +5,8 @@ services:
     image: mike/eve:1.0
     ports:
       - "5000:5000"
-    volumes:
-      - ./eveconfig:/eveconfig
+#    volumes:
+#      - ./eveconfig:/eveconfig
     environment:
       EVE_ENV: development
   mongo:

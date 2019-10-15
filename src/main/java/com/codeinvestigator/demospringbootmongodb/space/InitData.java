@@ -16,6 +16,7 @@ public class InitData {
 
     @PostConstruct
     public void createTestData(){
+        spaceShipRepository.deleteAll();
         spaceShipRepository.saveAll(
                 List.of(
                         new SpaceShip(null, "Falcon", 3),

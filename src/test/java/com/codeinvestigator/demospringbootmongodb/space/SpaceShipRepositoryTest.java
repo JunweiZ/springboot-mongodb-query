@@ -23,15 +23,16 @@ public class SpaceShipRepositoryTest {
     @Test
     public void createRows(){
         spaceShipRepository.deleteAll();
-        spaceShipRepository.save(new SpaceShip(null, "sourcer", 4));
-        spaceShipRepository.save(new SpaceShip(null, "sourcer", 14));
-        spaceShipRepository.save(new SpaceShip(null, "sourcer", 3));
-        spaceShipRepository.save(new SpaceShip(null, "sourcer", 5));
-        spaceShipRepository.save(new SpaceShip(null, "sourcer", 1));
-        spaceShipRepository.save(new SpaceShip(null, "sourcer", 20));
-        spaceShipRepository.save(new SpaceShip(null, "fork", 4));
-        spaceShipRepository.save(new SpaceShip(null, "freesbee", 1));
-        spaceShipRepository.save(new SpaceShip(null, "rocket", 30));
+        Captain captain = new Captain("captain unittest",3);
+        spaceShipRepository.save(new SpaceShip(null, "sourcer", 4, captain));
+        spaceShipRepository.save(new SpaceShip(null, "sourcer", 14, captain));
+        spaceShipRepository.save(new SpaceShip(null, "sourcer", 3, captain));
+        spaceShipRepository.save(new SpaceShip(null, "sourcer", 5, captain));
+        spaceShipRepository.save(new SpaceShip(null, "sourcer", 1, captain));
+        spaceShipRepository.save(new SpaceShip(null, "sourcer", 20,captain));
+        spaceShipRepository.save(new SpaceShip(null, "fork", 4,captain));
+        spaceShipRepository.save(new SpaceShip(null, "freesbee", 1,captain));
+        spaceShipRepository.save(new SpaceShip(null, "rocket", 30,captain));
         System.out.println("Heres our sources:");
         spaceShipService.allTheSourcers().forEach(System.out::println);
         System.out.println("*** DONE ***");
